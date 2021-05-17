@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>电子印章</title>
+
+    <style>
+       .wrap{
+            position: relative;
+            /* width: 816px;
+            height: 1056px; */
+            border:1px solid #000;
+            margin: 0 auto;
+        }
+        .drag{
+            width: 140px;
+            height: 140px;
+            cursor: pointer;
+            position: absolute;
+            top: 0;
+			left: 0;
+            border-radius: 50%;
+            border-style: solid;
+            border-color: red;
+            line-height: 140px;
+            text-align: center;
+			
+        }
+        .delBtn{
+            position: absolute;
+            height: 35px;
+            width: 45px;
+            top: -30px;
+            left: 110px;
+            border: 1px solid #000;
+            text-align: center;
+            line-height: 35px;
+        }
+        .img{
+            position: relative;
+            display:block;
+            /* width: 100%; */
+        }
+        .sealBtn{
+			background-color: #3498db;
+			padding: 10px;
+			position: relative;
+			font-family: 'Open Sans', sans-serif;
+			font-size: 12px;
+			text-decoration: none;
+			color: #fff;
+			float: left;
+			box-shadow: inset 0px 1px 0px #7fdcf1, 0px 6px 0px #0d586f;
+			border-radius: 5px;
+			margin: 10px;
+			padding: 10px 20px;
+			text-align: center;
+			cursor:default;
+        }
+        .iframeBox{
+            /* position: relative; */
+            width: 100%;
+            height: 900px;
+        }
+        #iframe{
+            /* position: relative; */
+            width: 100%;
+            height: 100%;
+        }
+		#active{
+			pointer-events:none;
+		}
+		.loading{
+			
+			width: 100%;
+            height: 100%;
+			position: fixed;
+			z-index: 100000;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			background: #000;
+            opacity:0.6;
+		}
+		.content{
+			position:absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			font-size: 26px;
+		}
+		
+    </style>
+</head>
+<!-- <script src="./Scripts/jquery-1.10.2.min.js"></script>
+<script src="./Scripts/ajax.js"></script>
+<script src="./Scripts/ajax.js"></script> -->
+<script src="./static/config.js"></script>
+<body>
+    <div class="sealBox">
+        <div class="sealBtn" id="complete" >盖章并退出</div>
+    </div>
+        
+    <div class="iframeBox">
+        <div class="wrap"></div>
+        <iframe name="iframe" id="iframe" src="#" >
+        </iframe>
+        
+    </div>
+	<div class="loading">
+		<div class="content">请稍等</div>
+	</div>
+    
+</body>
+</html>
